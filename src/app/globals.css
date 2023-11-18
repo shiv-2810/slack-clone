@@ -79,3 +79,7 @@
 .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
   border-radius: 7px;
 }
+
+.footer {
+  clip-path: ellipse(75% 100% at center top)
+}

@@ -1,12 +1,15 @@
+"use client"
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { ChevronDown, Menu, MenuSquare, Search } from "lucide-react";
-import Link from "next/link";
-import { url } from "inspector";
+import FloatingNav from "./FloatingNav";
+import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs"
 
 const HomePageTopHeader = () => {
+
   return (
     <div className="bg-[#541554] w-full flex justify-center">
+      <FloatingNav />
       <div className="max-w-screen-xl  w-full  p-5">
         <div className="flex justify-between items-center">
           <div className="flex space-x-5 items-center">
@@ -63,9 +66,11 @@ const HomePageTopHeader = () => {
             <div className="flex items-center space-x-3">
               <Search className="w-5 h-5 text-white cursor-pointer" />
               <Menu className="h-5 w-5 lg:hidden text-white" />
+              <LoginLink postLoginRedirectURL="/dashboard">
               <span className="hidden text-sm cursor-pointer font-medium text-white hover:underline lg:flex">
                 Sign in
               </span>
+              </LoginLink>
             </div>
             <Button
               className="hidden bg-[#541554] border-white w-36 h-11  rounded-[4px] text-white hover:border-[2px] hover:text-white hover:bg-[#541554]  mylg:flex"
@@ -73,12 +78,14 @@ const HomePageTopHeader = () => {
             >
               TALK TO SALES
             </Button>
+            <RegisterLink>
             <Button
               className="hidden border-white w-36 h-11  bg-white  rounded-[4px] text-[#4A154B]  hover:border-[2px] hover:border-[#4A154B] hover:text-[#4A154B] hover:bg-white lg:flex"
               variant={"default"}
             >
               TRY FOR FREE
             </Button>
+            </RegisterLink>
           </div>
         </div>
         <div className="w-full mt-10 items-center justify-center midmd:flex">

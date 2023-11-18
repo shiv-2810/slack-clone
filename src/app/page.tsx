@@ -1,12 +1,17 @@
+import Footer from '@/components/Footer'
 import HomePageTopHeader from '@/components/HomePageTopHeader'
+import NewWayToWork from '@/components/NewWayToWork'
+import TeamsSlack from '@/components/TeamsSlack'
 import TrustedCompanies from '@/components/TrustedCompanies'
-import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
-     <HomePageTopHeader />
+    <main className="flex  flex-col items-center">
+      <HomePageTopHeader />
       <TrustedCompanies />
+      <TeamsSlack />̨
+      <NewWayToWork />
+      <Footer />
     </main>
   )
 }
