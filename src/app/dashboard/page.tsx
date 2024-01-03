@@ -9,13 +9,13 @@ const Page = async () => {
 
     return (
         <div className="min-h-screen max-h-screen">
-            <DashboardTopbar />
-            <div className="relative top-12  min-h-[calc(100vh-2.5rem)]  flex justify-between">
-                <SideBar />
+        <DashboardTopbar />
+        <div className="fixed top-11 w-full  min-h-[calc(100vh-2.75rem)]  flex justify-between">
+            <SideBar />
 
-                <MainDashBoard />
+            <MainDashBoard />
 
-            </div>
+        </div>
         </div>
     )
 }
